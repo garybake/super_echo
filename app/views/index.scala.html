@@ -1,5 +1,8 @@
 @()
 
 @main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+  <h1>Super Echo</h1>
+  <h3>It's not an echo server</h3>
+
+  <div>curl -X POST -H "Content-Type: application/json" localhost:9000/mirror --data '{"firstname":"John","surname":"Doe"}'</div>
 }
