@@ -8,8 +8,8 @@ import play.api.libs.json._
 @Singleton
 class MirrorController @Inject()(val controllerComponents: ControllerComponents) extends BaseController with Logging {
 
-  def mirror_post(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
-    logger.warn("Hello there!")
+  def mirrorPost(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    logger.warn("mirror_post")
 
     val body: AnyContent = request.body
     val jsonBody: Option[JsValue] = body.asJson
@@ -27,7 +27,7 @@ class MirrorController @Inject()(val controllerComponents: ControllerComponents)
       }
   }
 
-  def mirror_get(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+  def mirrorGet(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
     logger.warn("mirror_get")
     logger.warn("GET")
 

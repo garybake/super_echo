@@ -5,8 +5,8 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-POST    /mirror                     controllers.MirrorController.mirror_post
-GET     /mirror                     controllers.MirrorController.mirror_get
+POST    /mirror                     controllers.MirrorController.mirrorPost
+GET     /mirror                     controllers.MirrorController.mirrorGet
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
